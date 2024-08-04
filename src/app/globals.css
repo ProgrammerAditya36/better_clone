@@ -1,107 +1,69 @@
 :root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  /* Primary Colors */
+  --color-primary: #017a4e;
+  --color-primary-dark: #004733;
+  --color-primary-light: #01c77d;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  /* Secondary Colors */
+  --color-secondary: #b8b8b8;
+  --color-secondary-dark: #565d5a;
+  --color-secondary-light: #dfe0dc;
 
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
+  /* Accent Colors */
+  --color-accent: #e8eae6;
+  --color-accent-dark: #6f7672;
+  --color-accent-light: #f0eee9;
 
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
+  /* Background Colors */
+  --color-background: #fffdfb;
+  --color-background-alt: #f6f6f3;
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
+  /* Text Colors */
+  --color-text: #292b29;
+  --color-text-light: #6f7672;
+
+  /* Semantic Colors */
+  --color-info: #6e4cf6;
+  --color-success: #017848;
+  --color-warning: #fbd566;
+  --color-error: #f96140;
+
+  /* Additional Colors */
+  --color-purple: #8e8eeb;
+  --color-orange: #fe8b72;
+  --color-brown: #b24a00;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
+/* Example usage */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.info-box {
+  background-color: var(--color-info);
+  color: var(--color-background);
+}
+
+.success-message {
+  color: var(--color-success);
+}
+
+.warning-alert {
+  background-color: var(--color-warning);
+  color: var(--color-text);
+}
+
+.error-message {
+  color: var(--color-error);
 }
